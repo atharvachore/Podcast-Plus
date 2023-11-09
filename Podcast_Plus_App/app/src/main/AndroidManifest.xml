@@ -11,9 +11,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Playcast"
-        tools:targetApi="31">
+        tools:targetApi="34">
+        <activity
+            android:name=".RegistrationPage"
+            android:exported="false"
+            android:label="@string/title_activity_registration_page"
+            android:theme="@style/Theme.Playcast" />
         <activity
             android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_login_page"
+            android:theme="@style/Theme.Playcast" />
+        <activity
+            android:name=".LoginPage"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Playcast">
