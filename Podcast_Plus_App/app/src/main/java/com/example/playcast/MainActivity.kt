@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.runtime.*
 import com.example.playcast.ui.theme.PlaycastTheme
@@ -74,37 +75,44 @@ fun playAudio(context: Context) {
             .fillMaxSize()
             .verticalScroll(rememberScrollState())) {
             Card(
-                //elevation = 12.dp,
+                elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
                 border = BorderStroke(1.dp, Color.Magenta),
                 modifier = Modifier
                     .padding(16.dp)
                     .fillMaxWidth()
                     .height(250.dp)
-            ) {
+            )
+            {
                 val mp: MediaPlayer = MediaPlayer.create(context, R.raw.audio)
-                Column (
+
+                Column(
                     modifier = Modifier.fillMaxSize(),
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
+
                     Image(
                         painter = painterResource(id = R.drawable.img),
                         contentDescription = null,
                         modifier = Modifier
                             .height(150.dp)
-                            .width(200.dp)
-                    )
+                            .width(200.dp),
+
+                        )
+
                     Text(
-                        text = "Gaur Gopal Das",
+                        text = "GaurGopalDas Returns To TRS - Life, Monkhood & Spirituality",
                         textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(start =20.dp, end = 20.dp)
+                        modifier = Modifier.padding(start = 20.dp, end = 20.dp)
                     )
-                    Row(){
+                    Row() {
+
                         IconButton(onClick = { mp.start() }, modifier = Modifier.size(35.dp)) {
                             Icon(
                                 painter = painterResource(id = R.drawable.play),
                                 contentDescription = ""
                             )
                         }
+
                         IconButton(onClick = { mp.pause() }, modifier = Modifier.size(35.dp)) {
                             Icon(
                                 painter = painterResource(id = R.drawable.pause),
@@ -114,7 +122,257 @@ fun playAudio(context: Context) {
                     }
                 }
             }
-            //Copy paste previous card for more entries
+            Card(
+                elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
+                border = BorderStroke(1.dp, Color.Magenta),
+                modifier = Modifier
+                    .padding(16.dp)
+                    .fillMaxWidth()
+                    .height(250.dp)
+            )
+            {
+                val mp: MediaPlayer = MediaPlayer.create(context, R.raw.audio_1)
+
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+
+                ) {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.img_1),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .height(150.dp)
+                            .width(200.dp)
+                    )
+
+                    Text(
+                        text = "Haunted Houses, Evil Spirits & The Paranormal Explained | Sarbajeet Mohanty",
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(start = 20.dp, end = 20.dp)
+                    )
+
+                    Row() {
+
+                        IconButton(onClick = { mp.start() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.play),
+                                contentDescription = ""
+                            )
+                        }
+
+                        IconButton(onClick = { mp.pause() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.pause),
+                                contentDescription = ""
+                            )
+                        }
+
+                    }
+                }
+
+            }
+
+
+
+            Card(
+                elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
+                border = BorderStroke(1.dp, Color.Magenta),
+                modifier = Modifier
+                    .padding(16.dp)
+                    .fillMaxWidth()
+                    .height(250.dp)
+            )
+            {
+                val mp: MediaPlayer = MediaPlayer.create(context, R.raw.audio_2)
+
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+
+                ) {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.img_2),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .height(150.dp)
+                            .width(200.dp)
+                    )
+
+                    Text(
+                        text = "Kaali Mata ki kahani - Black Magic & Aghoris ft. Dr Vineet Aggarwal",
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(start = 20.dp, end = 20.dp)
+                    )
+
+                    Row() {
+
+                        IconButton(onClick = { mp.start() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.play),
+                                contentDescription = ""
+                            )
+                        }
+
+                        IconButton(onClick = { mp.pause() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.pause),
+                                contentDescription = ""
+                            )
+                        }
+
+                    }
+                }
+
+            }
+
+
+            Card(
+                elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
+                border = BorderStroke(1.dp, Color.Magenta),
+                modifier = Modifier
+                    .padding(16.dp)
+                    .fillMaxWidth()
+                    .height(250.dp)
+            )
+            {
+                val mp: MediaPlayer = MediaPlayer.create(context, R.raw.audio_3)
+
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.img_3),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .height(150.dp)
+                            .width(200.dp),
+
+                        )
+
+                    Text(
+                        text = "Tantra Explained Simply | Rajarshi Nandy - Mata, Bhairav & Kamakhya Devi",
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(start = 20.dp, end = 20.dp)
+                    )
+                    Row() {
+
+                        IconButton(onClick = { mp.start() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.play),
+                                contentDescription = ""
+                            )
+                        }
+
+                        IconButton(onClick = { mp.pause() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.pause),
+                                contentDescription = ""
+                            )
+                        }
+                    }
+                }
+            }
+            Card(
+                elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
+                border = BorderStroke(1.dp, Color.Magenta),
+                modifier = Modifier
+                    .padding(16.dp)
+                    .fillMaxWidth()
+                    .height(250.dp)
+            )
+            {
+                val mp: MediaPlayer = MediaPlayer.create(context, R.raw.audio_4)
+
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.img_4),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .height(150.dp)
+                            .width(200.dp),
+
+                        )
+
+                    Text(
+                        text = "Complete Story Of Shri Krishna - Explained In 20 Minutes",
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(start = 20.dp, end = 20.dp)
+                    )
+                    Row() {
+
+                        IconButton(onClick = { mp.start() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.play),
+                                contentDescription = ""
+                            )
+                        }
+
+                        IconButton(onClick = { mp.pause() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.pause),
+                                contentDescription = ""
+                            )
+                        }
+                    }
+                }
+            }
+            Card(
+                elevation = CardDefaults.cardElevation(defaultElevation = 12.dp),
+                border = BorderStroke(1.dp, Color.Magenta),
+                modifier = Modifier
+                    .padding(16.dp)
+                    .fillMaxWidth()
+                    .height(250.dp)
+            )
+            {
+                val mp: MediaPlayer = MediaPlayer.create(context, R.raw.audio_5)
+
+                Column(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalAlignment = Alignment.CenterHorizontally
+                ) {
+
+                    Image(
+                        painter = painterResource(id = R.drawable.img_5),
+                        contentDescription = null,
+                        modifier = Modifier
+                            .height(150.dp)
+                            .width(200.dp),
+
+                        )
+
+                    Text(
+                        text = "Mahabharat Ki Poori Kahaani - Arjun, Shri Krishna & Yuddh - Ami Ganatra ",
+                        textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(start = 20.dp, end = 20.dp)
+                    )
+                    Row() {
+
+                        IconButton(onClick = { mp.start() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.play),
+                                contentDescription = ""
+                            )
+                        }
+
+                        IconButton(onClick = { mp.pause() }, modifier = Modifier.size(35.dp)) {
+                            Icon(
+                                painter = painterResource(id = R.drawable.pause),
+                                contentDescription = ""
+                            )
+                        }
+                    }
+                }
+            }
         }
     }
 }

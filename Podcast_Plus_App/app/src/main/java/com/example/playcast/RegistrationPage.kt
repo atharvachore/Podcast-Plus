@@ -115,10 +115,10 @@ fun RegistrationScreen(context: Context, databseHelper: UserDatabaseHelper) {
             placeholder = {
                 Text(
                     text = "username",
-                    color = Color.White
+                    color = Color.Black
                 )
             },
-            colors = TextFieldDefaults.textFieldColors(containerColor = Color.Transparent)
+            colors = TextFieldDefaults.textFieldColors(disabledTextColor = Color.Transparent)
             )
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -131,9 +131,9 @@ fun RegistrationScreen(context: Context, databseHelper: UserDatabaseHelper) {
                     contentDescription = "LockIcon",
                     tint = Color(0xFF6a3ef9))
             },
-            placeholder = { Text(text = "password", color = Color.White) },
+            placeholder = { Text(text = "password", color = Color.Black) },
             visualTransformation = PasswordVisualTransformation(),
-            colors = TextFieldDefaults.textFieldColors(containerColor = Color.Transparent)
+            colors = TextFieldDefaults.textFieldColors(disabledTextColor = Color.Transparent)
         )
         Spacer(modifier = Modifier.height(16.dp))
 
@@ -146,8 +146,8 @@ fun RegistrationScreen(context: Context, databseHelper: UserDatabaseHelper) {
                     contentDescription = "EmailIcon",
                     tint = Color(0xFF6a3ef9))
             },
-            placeholder = { Text(text = "email", color = Color.White) },
-            colors = TextFieldDefaults.textFieldColors(containerColor = Color.Transparent)
+            placeholder = { Text(text = "email", color = Color.Black) },
+            colors = TextFieldDefaults.textFieldColors(disabledTextColor = Color.Transparent)
         )
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -189,7 +189,7 @@ fun RegistrationScreen(context: Context, databseHelper: UserDatabaseHelper) {
             Text(
                 text = "Register",
                 fontWeight = FontWeight.Bold,
-                color = Color(0xFF6a3ef9)
+                color = Color(0xFF000000)
             )
         }
 

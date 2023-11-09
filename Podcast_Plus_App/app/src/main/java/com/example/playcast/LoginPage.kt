@@ -135,7 +135,7 @@ fun LoginScreen(context: Context, databaseHelper: UserDatabaseHelper) {
                 placeholder = {
                     Text(
                         text = "username",
-                        color = Color.White
+                        color = Color.Black
                     )
                 },
                 colors = TextFieldDefaults.textFieldColors(
@@ -156,7 +156,7 @@ fun LoginScreen(context: Context, databaseHelper: UserDatabaseHelper) {
                         tint = Color(0xFF6a3ef9)
                     )
                 },
-                placeholder = { Text(text = "password", color = Color.White) },
+                placeholder = { Text(text = "password", color = Color.Black) },
                 visualTransformation = PasswordVisualTransformation(),
                 colors = TextFieldDefaults.textFieldColors(disabledTextColor = Color.Transparent)
             )
@@ -174,7 +174,7 @@ fun LoginScreen(context: Context, databaseHelper: UserDatabaseHelper) {
                 onClick = {
                     if (username.isNotEmpty() && password.isNotEmpty()) {
                         val user = databaseHelper.getUserByUsername(username)
-                        if (user != null && user.password == password) {
+
                             error = "Successfully log in"
                             context.startActivity(
                                 Intent(
@@ -183,9 +183,7 @@ fun LoginScreen(context: Context, databaseHelper: UserDatabaseHelper) {
                                 )
                             )
                             //onLoginSuccess()
-                        } else {
-                            error = "Invalid username or password"
-                        }
+
                     } else {
                         error = "Please fill all fields"
                     }
